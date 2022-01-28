@@ -8,11 +8,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 # Pushing code to gitHub
-git init
+git init\
+
 git add .
-git status 
+
+git status \
+
 git commit -m "add commit Message Here"
-git remote add origin "url of the repo"
+git remote add origin "url of the repo"\
 git push origin master 
 #### Note: if it fails and return an error do
 git push origin master -f
