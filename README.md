@@ -12,6 +12,7 @@ git init
 git add .
 git status 
 git commit -m "add commit Message Here"
+git remote add origin "url of the repo"
 git push origin master 
 #### Note: if it fails and return an error do
 git push origin master -f
