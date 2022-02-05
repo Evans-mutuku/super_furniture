@@ -19,7 +19,7 @@ const ImageSlider = ({ slides }) => {
   }
   return (
     <div>
-      <section className="slider home__image">
+      <section className="slider  backdrop-blur-3xl from-slate-400">
         <ChevronLeftIcon
           onClick={nextSlide}
           className="left-arrow h-10 bg-orange-500 rounded-full"

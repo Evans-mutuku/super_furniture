@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import {
-  GiftIcon,
   SearchIcon,
   ShoppingCartIcon,
   UserIcon,
@@ -20,7 +19,7 @@ const Header = () => {
   // }
 
   return (
-    <div className=" shadow-md bg-white pt-3 pb-3 z-100 ">
+    <div className=" shadow-md bg-white pt-3 pb-3 z-auto nav">
       <main className=" mx-wd flex items-center justify-between mx-auto ">
         <section>
           <h2

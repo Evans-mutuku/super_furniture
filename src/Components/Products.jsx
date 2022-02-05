@@ -2,8 +2,8 @@ import React from "react";
 
 const Products = ({ id, price, title, image, rating }) => {
   return (
-    <div>
-      <section className="flex flex-col bg-white items-center font-serif p-4 z-100 w-60">
+    <main>
+      <section className="flex flex-col bg-white items-center font-serif p-4 z-100 w-60 hover:scale-105 duration-300 shadow-lg">
         <p className="text-lg leading-5 text-gray-700 font-semibold">{title}</p>
         <img className="h-40 w-full" src={image} alt="" srcset="" />
         <p className="font-bold">{price}</p>
@@ -18,7 +18,7 @@ const Products = ({ id, price, title, image, rating }) => {
           Add To Cart
         </button>
       </section>
-    </div>
+    </main>
   );
 };
 
