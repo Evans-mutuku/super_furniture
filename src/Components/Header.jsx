@@ -1,22 +1,21 @@
-import { useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import {
   SearchIcon,
   ShoppingCartIcon,
   UserIcon,
 } from "@heroicons/react/outline";
-import Logo from "../Images/JohFun.jpg";
-// import { useState } from "react";
-// import { useStateValue } from "../Utils/StateProvider";
+import { auth } from "../Utils/firebase";
+import { useStateValue } from "../Utils/StateProvider";
 
 const Header = () => {
-  // const [{basket, user}, dispatch] = useStateValue()
+  const [{basket, user}, dispatch] = useStateValue ()
   const navigate = useNavigate();
 
-  // const handleAuthentication = () => {
-  //   if(user){
-  //     auth.signOut()
-  //   }
-  // }
+  const handleAuthentication = () => {
+    if(user){
+      auth.signOut()
+    }
+  }
 
   return (
     <div className=" shadow-md bg-white pt-3 pb-3 z-auto nav">
@@ -26,11 +25,13 @@ const Header = () => {
             className="text-2xl cursor-pointer text-orange-500 font-bold"
             onClick={() => navigate("/")}
           >
-            <img className="h-10 cursor-pointer" src={Logo} alt="johfun logo" />
+            {" "}
+            SuperMrembo
+            {/* <img className="h-10 cursor-pointer" src={Logo} alt="johfun logo" /> */}
           </h2>
         </section>
 
-        <section className="flex justify-between rounded-full p-1 w-3/5 pl-4 pr-3 items-center border-2 border-orange-500">
+        <section className="flex justify-between rounded-full p-1 w-4/5 ml-16 pl-4 pr-3 items-center border-2 border-orange-500">
           <input
             className="pl-2 focus:outline-none w-full pr-2 text-sm"
             type="search"
@@ -39,21 +40,30 @@ const Header = () => {
           <SearchIcon className="h-7 cursor-pointer text-orange-500 font-bold" />
         </section>
 
-        <section className="flex justify-between w-1/5 items-center">
-          <div onClick={() => navigate("/login")}>
-            <div className="text-sm flex cursor-pointer">
+        <section className="flex justify-between w-2/5 ml-32 items-center">
+          <div>
+            <div
+              onClick={() => navigate(!user && "/login")}
+              className="text-sm flex cursor-pointer"
+            >
               <UserIcon className="h-8" />
-              <span className="flex cursor-pointer text-gray-500 flex-col">
-                <span className="font-s -mb-1">Hello</span>
-                <span>SignIn, User </span>
-              </span>
+              <div
+                onClick={handleAuthentication}
+                className="flex cursor-pointer text-gray-500 flex-col"
+              >
+                <span className="text-sm">
+                  {!user ? "Hello Guest" : <p className="text-orange-500 textSm"> {user?.email} </p>}
+                </span>
+                <span className="text-sm">
+                  {user ? "Sign Out" : "Sign In"}{" "}
+                </span>{" "}
+              </div>
             </div>
           </div>
 
           <div onClick={() => navigate("/orders")}>
             <div className="text-sm flex flex-col cursor-pointer">
               <span className="font-s text-gray-600">Returns</span>
-              {/* <GiftIcon className="h-5" /> */}
               <span className="font-light">& Orders</span>
             </div>
           </div>
@@ -61,7 +71,7 @@ const Header = () => {
           <div onClick={() => navigate("/checkout")}>
             <span className="cursor-pointer">
               <span className="text-sm text-orange-600 ml-3 mb-12 font-bold animate-pulse">
-                3
+                {basket?.length}
               </span>
               <ShoppingCartIcon className="h-8 -mt-2" />
             </span>

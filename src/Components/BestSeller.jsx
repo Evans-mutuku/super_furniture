@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { db } from "../Utils/firebase";
 
 const Tables = [
   {
     image: "https://m.media-amazon.com/images/I/810d-F8y3YS._AC_UL320_.jpg",
     description: "ODK Computer Writing Desk 39 inch",
-    price: "150.00",
+    price: "15,000",
   },
   {
     image: "https://m.media-amazon.com/images/I/61FQEy2s19L._AC_UL320_.jpg",
     description: "Computer Desk, 43.3''",
-    price: "170.00",
+    price: "17,000",
   },
   {
     image: "https://m.media-amazon.com/images/I/81Pb2inuMWL._AC_UL320_.jpg",
     description: "Winsome Wood Suzanne Kitchen",
-    price: "170.50",
+    price: "10,070",
   },
 ];
 
@@ -23,28 +24,28 @@ const Couches = [
   {
     image: "https://m.media-amazon.com/images/I/71UjeO3bQxL._AC_UL320_.jpg",
     description: "JohFun Brand - Stone & Beam Westview Extra-Deep",
-    price: "450",
+    price: "45,000",
   },
   {
     image: "https://m.media-amazon.com/images/I/71-iyDkmzIL._AC_UL320_.jpg",
     description: "JohFun Brand – Stone & Beam Genesse Sectional Sofa Couch",
-    price: "440.99",
+    price: "40,040",
   },
   {
     image: "https://m.media-amazon.com/images/I/71ywXWARrXL._AC_UL320_.jpg",
     description: "FURINNO Bastia Vintage Modern Chesterfield Button Tufted",
-    price: "420",
+    price: "42,000",
   },
   {
     image: "https://m.media-amazon.com/images/I/61uCGJX37qL._AC_UL320_.jpg",
     description:
       "maxmill 4 Pieces Stretch Velvet Sofa Slipcovers with 3 Individual",
-    price: "399.99",
+    price: "39,000",
   },
   {
     image: "https://m.media-amazon.com/images/I/5101CKixyrL._AC_UL320_.jpg",
     description: "Signature Design by Evans - Microfiber Loveseat,",
-    price: "309.99",
+    price: "30,900",
   },
 ];
 
@@ -52,29 +53,29 @@ const WallUnits = [
   {
     image: "https://m.media-amazon.com/images/I/61DohUGovdL._AC_UL320_.jpg",
     description: "JohFun Large Storage Cabinet, Soft White Finish ",
-    price: "290",
+    price: "29,500",
   },
   {
     image: "https://m.media-amazon.com/images/I/81o5Ax5BfAL._AC_UL320_.jpg",
     description: "JohFun Cannery Bridge Storage Wall, Sindoori Mango finish",
-    price: "300",
+    price: "30,000",
   },
   {
     image: "https://m.media-amazon.com/images/I/810YkVISKUS._AC_UL320_.jpg",
     description: "Bamboo 3-Tier Shoe Shelf",
-    price: "42",
+    price: "42,500",
   },
   {
     image: "https://m.media-amazon.com/images/I/71LhXxkz6+L._AC_UL320_.jpg",
     description:
       "ClosetMaid 8925 2-Door Stackable Laminate Organizer, Espresso",
-    price: "120.99",
+    price: "12,500",
   },
   {
     image:
       "https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/31/119822/1.jpg?5215",
     description: "JohFun TV Wall Unit Home Tulum",
-    price: "120.99",
+    price: "12050",
   },
 ];
 
@@ -83,23 +84,23 @@ const Beds = [
     image:
       "https://www.godrejinterio.com/imagestore/B2C/56101515SD00434/56101515SD00434_01_803x602.png",
     description: "JohFun super Bed",
-    price: "200",
+    price: "20,000",
   },
   {
     image:
       "https://www.circlefurniture.com/userfiles/images/Products/copeland/Mansfield/Mansfield-Bed.jpg",
     description: "JohFun Furniture - Copeland Furniture Platform Bed Mansfield",
-    price: "220",
+    price: "22,500",
   },
   {
     image: "https://www.shipshewanafurniture.com/images/brentwood-bed.jpg",
     description: "JohFun Bed",
-    price: "180",
+    price: "18,500",
   },
   {
     image: "https://m.media-amazon.com/images/I/71GM4Dp8KJL._AC_UL320_.jpg",
     description: "JohFun Caribou Solid Hardwood Twin Bunk Bed",
-    price: "120",
+    price: "12,000",
   },
 ];
 
@@ -108,43 +109,52 @@ const Doors = [
     image:
       "https://media.istockphoto.com/photos/wooden-interior-door-with-handle-picture-id173201523?k=20&m=173201523&s=612x612&w=0&h=R8vyIdCIQ3Hz3M101HmafCfo4m69MdK4r665jeeP3_8=",
     description: "Wood Membrane Door, Size/dimension: 7l X 3.5b Feet - Mahogany",
-    price: "180",
+    price: "18,000",
   },
   {
     image:
       "https://www.watchisthis.com/wp-content/uploads/2016/10/open-door.jpg",
     description: "Wood Membrane Door, Size/dimension: 7l X 3.5b Feet - red",
-    price: "100",
+    price: "10,000",
   },
   {
     image:
       "https://images.thdstatic.com/productImages/4c83e566-ba08-47bb-82c1-2b160437544f/svn/tangerine-mmi-door-steel-doors-without-glass-z024086r-64_600.jpg",
     description: "Wood Membrane Door, Size/dimension: 7l X 3.5b Feet - Orange",
-    price: "89.99",
+    price: "8,000",
   },
   {
     image: "http://creckhardware.com/img/products/2big.jpg",
     description:
       "Wood Membrane Door, Size/dimension: 7l X 3.5b Feet - Mahogany",
-    price: "150",
+    price: "15,500",
   },
   {
     image:
       " https://5.imimg.com/data5/XJ/JC/MY-47145159/laminate-flash-door-500x500.jpg",
     description: "Wood Membrane Door, Size/dimension: 7l X 3.5b Feet",
-    price: "150",
+    price: "15,100",
   },
 ];
 
 const SampleProducts = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [subscriberEmail, setSubscriberEmail] = useState("")
 
+  const subscribe = (e) => {
+    e.preventDefault()
+
+    db.collection("subscriptions").add({
+      subscriberEmail: subscriberEmail
+    });
+    setSubscriberEmail("")
+  }
 
   return (
     <main>
       <section className="bg-white p-3">
         <span className="font-bold text-xl text-gray-700 text-c">
-          JohFun Tables Top Seller
+          SuperMrembo Tables Top Seller
         </span>
         <span
           onClick={() => navigate("/tables")}
@@ -164,14 +174,29 @@ const SampleProducts = () => {
                 {table.description}
               </p>
               <p className="text-xl text-orange-500 font-bold ">
-                $ {table.price}
+                ksh {table.price}
               </p>
             </span>
           ))}
         </span>
-        {/* <span className="mt-4 bg-orange-500 flex justify-center cursor-pointer w-24">
-          Visit Page
-        </span> */}
+      </section>
+      <section className="mt-5 bg-white p-3">
+        <p className="text-sm text-c pb-3">
+          Trade Alert - Delivering the latest product trends and industry news
+          straight to your inbox.
+        </p>
+        <span className="">
+          <input
+            onChange={(e) => setSubscriberEmail(e.target.value)}
+            className="p-2 focus:outline-none border-2 border-orange-400 w-80"
+            type="email"
+            placeholder="Your Email"
+          />
+          <button onClick={subscribe} className="ml-2 bg-orange-500 p-2 hover:bg-orange-600 text-white">
+            Subscribe
+          </button>
+        </span>
+        <p className="text-sm text-gray-500">We’ll never share your email address with a third-party. </p>
       </section>
       <section className="bg-white p-3 mt-5">
         <span className="font-bold text-xl text-gray-700 text-c">
@@ -191,7 +216,7 @@ const SampleProducts = () => {
                 {couch.description}
               </p>
               <p className="text-xl text-orange-500 font-bold ">
-                $ {couch.price}
+                ksh {couch.price}
               </p>
             </span>
           ))}
@@ -219,7 +244,7 @@ const SampleProducts = () => {
                 {wallUnit.description}
               </p>
               <p className="text-xl text-orange-500 font-bold mt-2">
-                $ {wallUnit.price}
+                ksh {wallUnit.price}
               </p>
             </span>
           ))}
@@ -247,7 +272,7 @@ const SampleProducts = () => {
                 {bed.description}
               </p>
               <p className="text-xl text-orange-500 font-bold mt-2">
-                $ {bed.price}
+                ksh {bed.price}
               </p>
             </span>
           ))}
@@ -255,7 +280,7 @@ const SampleProducts = () => {
       </section>
       <section className="bg-white p-3 mt-5">
         <span className="font-bold text-xl text-gray-700 text-c">
-          Let JohFun Lock Your Home
+          Let SuperMrembo Lock Your Home
         </span>
         <span
           onClick={() => navigate("/doors")}
@@ -275,7 +300,7 @@ const SampleProducts = () => {
                 {door.description}
               </p>
               <p className="text-xl text-orange-500 font-bold mt-2">
-                $ {door.price}
+                ksh {door.price}
               </p>
             </span>
           ))}

@@ -3,56 +3,67 @@
 @tailwind utilities;
 
 @layer utilities {
-    @variants hover, focus {
-      .bradius {
-        border-radius: 4rem;
-      }
-      .filter-grayscale {
-        filter: grayscale(100%);
-      }
-      .nav{
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1;
-        background-color: white;
-        transition-timing-function: ease-in;
-        transition: all 0.5s;
-        font-family: sans-serif;
-    
+  @variants hover, focus {
+    .b-radius {
+      border-radius: 4rem;
     }
-    .text-c{
-    color:#0F1111;
-    font-family: "Amazon Ember", Arial, sans-serif;
+    .filter-grayscale {
+      filter: grayscale(100%);
     }
-    .text-font{
-      font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      background-color: white;
+      transition-timing-function: ease-in;
+      transition: all 0.5s;
+      font-family: sans-serif;
+    }
+    .text-c {
+      color: #0f1111;
+      font-family: "Amazon Ember", Arial, sans-serif;
+    }
+    .text-font {
+      font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,
+        Helvetica Neue, Arial, sans-serif;
     }
 
-    .mx-wd{
-        width:95%;
+    .mx-wd {
+      width: 95%;
     }
-    .mt{
+    .mt {
       margin-top: -150px;
     }
 
-    .mx-wd2{
-      width:80%;
-  }
+    .mx-wd2 {
+      width: 80%;
+    }
+    .mx-wd3 {
+      width: 70%;
+    }
 
-  .font-s{
-      font-size:12px;
-  }
+    .font-s {
+      font-size: 12px;
+    }
 
-.home__image{
-    width: 100%;
-    z-index: 0;
-    margin-bottom: -150px;
-    /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0,0,0,0.4)); */
+    .home__image {
+      width: 100%;
+      z-index: 0;
+      margin-bottom: -150px;
+      /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0,0,0,0.4)); */
+    }
+  }
 }
-}}
 
+.textSm{
+  font-size: 10px;
+  font-weight: bold;
+}
 
+.min-h{
+  min-height: 55vh;
+}
 .slider {
   /* position: relative; */
   height: 80vh;
@@ -67,7 +78,7 @@
   height: 400px;
 }
 
-.img-s{
+.img-s {
   max-height: 250px;
 }
 

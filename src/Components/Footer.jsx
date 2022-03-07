@@ -1,12 +1,11 @@
 import React from "react";
-import {} from "@heroicons/react/outline";
-import logo from "../Images/JohFun1.jpg";
+// import logo from "../Images/JohFun1.jpg";
 
 const Footer = () => {
   return (
     <div className="w-full mt-10 bg-gray-900  pb-10">
       <section className="pt-6 pb-3 mx-wd2 mx-auto border-b border-gray-700 flex justify-center flex-col items-center">
-        <img className="w-44 mb-6  items-center" src={logo} alt="" />
+        {/* <img className="w-44 mb-6  items-center" src={logo} alt="" /> */}
         <span className="flex justify-between w-full flex-wrap mb-3">
           <span>
             <h3 className="pb-2 text-white font-semibold  text-lg">
@@ -66,7 +65,7 @@ const Footer = () => {
         <p className="hover:text-orange-500 cursor-pointer">Ads Policy</p>
         <span className="flex items-center">
           <p className="mt-1 text-xl pr-1">©</p>
-          JohFun 2022, johfun.com
+          SuperMrembo 2022
         </span>
       </section>
     </div>
