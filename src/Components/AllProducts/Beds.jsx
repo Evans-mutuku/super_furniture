@@ -86,7 +86,7 @@ const Beds = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${20500}`}
+            price={20500}
             image="https://www.godrejinterio.com/imagestore/B2C/56101515SD00434/56101515SD00434_01_803x602.png"
             rating={4}
           />
@@ -96,7 +96,7 @@ const Beds = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${22000}`}
+            price={22000}
             image="https://www.circlefurniture.com/userfiles/images/Products/copeland/Mansfield/Mansfield-Bed.jpg"
             rating={4}
           />
@@ -106,7 +106,7 @@ const Beds = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${18500}`}
+            price={18500}
             image="https://www.shipshewanafurniture.com/images/brentwood-bed.jpg"
             rating={4}
           />
@@ -116,7 +116,7 @@ const Beds = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${13000}`}
+            price={13000}
             image="https://m.media-amazon.com/images/I/71GM4Dp8KJL._AC_UL320_.jpg"
             rating={4}
           />

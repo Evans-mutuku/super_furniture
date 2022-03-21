@@ -85,7 +85,7 @@ const Doors = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${18000}`}
+            price={18000}
             image="https://media.istockphoto.com/photos/wooden-interior-door-with-handle-picture-id173201523?k=20&m=173201523&s=612x612&w=0&h=R8vyIdCIQ3Hz3M101HmafCfo4m69MdK4r665jeeP3_8="
             rating={5}
           />
@@ -95,7 +95,7 @@ const Doors = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${10000}`}
+            price={10000}
             image="https://www.watchisthis.com/wp-content/uploads/2016/10/open-door.jpg"
             rating={4}
           />
@@ -105,7 +105,7 @@ const Doors = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${10000}`}
+            price={10000}
             image="https://images.thdstatic.com/productImages/4c83e566-ba08-47bb-82c1-2b160437544f/svn/tangerine-mmi-door-steel-doors-without-glass-z024086r-64_600.jpg"
             rating={4}
           />
@@ -115,7 +115,7 @@ const Doors = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${15000}`}
+            price={15000}
             image="http://creckhardware.com/img/products/2big.jpg"
             rating={3}
           />

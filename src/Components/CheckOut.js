@@ -52,7 +52,7 @@ const CheckOut = () => {
         </section>
         <section className='mt-5 flex justify-between w-full'>
             <div className='w-4/5 mr-20'>
-                <h3 className='mb-3 flex'>Hello, <p className='ml-2 text-orange-700 font-bold'>{user?.email}</p></h3>
+                <h3 className='mb-3 flex'>Hello, <p className='ml-2 text-orange-700 font-boldP'>{user?.email}</p></h3>
                 <h2 className='text-xl mb-3'>Your furniture basket</h2>
                 {basket.map(item => (
                     <CheckOutProduct 

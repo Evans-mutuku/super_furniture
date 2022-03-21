@@ -88,7 +88,7 @@ const Couch = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${45000}`}
+            price={45000}
             image="https://m.media-amazon.com/images/I/71UjeO3bQxL._AC_UL320_.jpg"
             rating={4}
           />
@@ -98,7 +98,7 @@ const Couch = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${40500}`}
+            price={40500}
             image="https://m.media-amazon.com/images/I/71-iyDkmzIL._AC_UL320_.jpg"
             rating={4}
           />
@@ -108,7 +108,7 @@ const Couch = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${42500}`}
+            price={42500}
             image="https://m.media-amazon.com/images/I/71ywXWARrXL._AC_UL320_.jpg"
             rating={4}
           />
@@ -118,7 +118,7 @@ const Couch = () => {
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={` ${39000}`}
+            price={39000}
             image="https://m.media-amazon.com/images/I/61uCGJX37qL._AC_UL320_.jpg"
             rating={4}
           />
