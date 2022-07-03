@@ -5,10 +5,8 @@ import ImageSlider from "./Slider/ImageSlider";
 import { SlideData } from "./Slider/SlideData";
 import { useNavigate } from "react-router-dom";
 
-
 const LoginComponent = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <section className="w-60 md:none">
@@ -17,7 +15,10 @@ const LoginComponent = () => {
           {" "}
           Get to know when we have new deals
         </h3>
-        <button onClick={() => navigate('/login')} className="text-white bg-orange-500 hover:bg-orange-600 p-1 font-semibold w-full mt-4">
+        <button
+          onClick={() => navigate("/login")}
+          className="text-white bg-pink-500 hover:bg-pink-600 p-1 font-semibold w-full mt-4"
+        >
           Sign In Now
         </button>
       </section>
@@ -26,7 +27,7 @@ const LoginComponent = () => {
           src="https://marshallcf.com/wp-content/uploads/2018/10/Time-to-Sell.jpeg"
           alt="coming soon"
         />
-        <button className="bg-orange-500 font-semibold hover:bg-orange-600 text-white w-full mt-3 rounded-sm p-1">
+        <button className="bg-pink-500 font-semibold hover:bg-pink-600 text-white w-full mt-3 rounded-sm p-1">
           Sell With Us
         </button>
       </section>
@@ -37,35 +38,35 @@ const LoginComponent = () => {
 const Home = () => {
   return (
     <>
-       <ImageSlider  slides={SlideData} />
+      <ImageSlider slides={SlideData} />
       <div className="mx-wd mx-auto relative -mt-36 ">
         <section className="flex items-center flex-wrap justify-between mb-5">
           <Products
             id="1234"
-            title="Office Table"
+            title="Lorem Ipsum Text"
             price={20000}
-            image="https://stylesatlife.com/wp-content/uploads/2017/07/Office-Computer-Table.jpg"
+            image="https://www.eatthis.com/wp-content/uploads/sites/4/2019/06/deep-dish-pizza-chicago.jpg"
             rating={3}
           />
           <Products
             id="1234"
-            title="Pacific Wall Unit"
+            title="Lorem Ipsum Text"
             price={45000}
-            image="https://5.imimg.com/data5/ED/IA/GLADMIN-9068540/pacific-wall-unit-500x500.png"
+            image="https://foodtank.com/wp-content/uploads/2022/02/Food-Tank-Food-and-Food-System-Documentaries-1.jpg"
             rating={3}
           />
           <Products
             id="1234"
-            title="Single End Couch"
+            title="Lorem Ipsum Text"
             price={21500}
-            image="https://spnsfurniture.com/wp-content/uploads/2019/12/Cindrella-Chaise-RHS-Beige-and-Magenta-Colour-spns-furniture-1-700x490.jpg"
+            image="https://media.npr.org/assets/img/2022/06/06/gettyimages-1199291938-40_custom-7191b02345de50bf85961f6342c202dd9d6d20a0.jpg"
             rating={3}
           />
           <Products
             id="1234"
-            title="Grove King size bed"
+            title="Lorem Ipsum Text"
             price={17500}
-            image="https://www.godrejinterio.com/imagestore/B2C/56101515SD00434/56101515SD00434_01_803x602.png"
+            image="https://img-global.cpcdn.com/recipes/e16e61be3886271d/1200x630cq70/photo.jpg"
             rating={3}
           />
 

@@ -12,7 +12,7 @@ const Footer = () => {
               Get to Know Us
             </h3>
             <p className="text-sm text-gray-300 hover:text-orange-500 cursor-pointer mb-2 ">
-              About JohFun
+              About AlbaHotel
             </p>
             <p className="text-sm text-gray-300 hover:text-orange-500 cursor-pointer mb-2">
               Contact Us
@@ -29,7 +29,7 @@ const Footer = () => {
               Make Money with Us
             </h3>
             <p className="text-sm text-gray-300 hover:text-orange-500 cursor-pointer mb-2 ">
-              Sell products on JohFun
+              Sell products on AlbaHotel
             </p>
             <p className="text-sm text-gray-300 hover:text-orange-500 cursor-pointer mb-2">
               Advertise your products
@@ -65,7 +65,7 @@ const Footer = () => {
         <p className="hover:text-orange-500 cursor-pointer">Ads Policy</p>
         <span className="flex items-center">
           <p className="mt-1 text-xl pr-1">©</p>
-          SuperMrembo 2022
+          AlbaHotel 2022
         </span>
       </section>
     </div>

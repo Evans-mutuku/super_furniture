@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useStateValue } from '../../Utils/StateProvider';
+import { useStateValue } from "../../Utils/StateProvider";
 
 const LoginComponent = () => {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const LoginComponent = () => {
         </h3>
         <button
           onClick={() => navigate("/login")}
-          className="text-white bg-orange-500 hover:bg-orange-600 p-1 font-semibold w-full mt-4"
+          className="text-white bg-pink-500 hover:bg-pink-600 p-1 font-semibold w-full mt-4"
         >
           Sign In Now
         </button>
@@ -24,7 +24,7 @@ const LoginComponent = () => {
           src="https://marshallcf.com/wp-content/uploads/2018/10/Time-to-Sell.jpeg"
           alt="coming soon"
         />
-        <button className="bg-orange-500 font-semibold hover:bg-orange-600 text-white w-full mt-3 rounded-sm p-1">
+        <button className="bg-pink-500 font-semibold hover:bg-pink-600 text-white w-full mt-3 rounded-sm p-1">
           Sell With Us
         </button>
       </section>
@@ -32,30 +32,30 @@ const LoginComponent = () => {
   );
 };
 
-const WallHandler = ({id, title, image, description, price, rating }) => {
-  const [{basket}, dispatch] = useStateValue()
+const WallHandler = ({ id, title, image, description, price, rating }) => {
+  const [{ basket }, dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({
-      type: 'ADD_TO_BASKET',
+      type: "ADD_TO_BASKET",
       item: {
         id: id,
         title: title,
         image: image,
         description: description,
         price: price,
-        rating: rating
-      }
-    })
-  }
+        rating: rating,
+      },
+    });
+  };
   return (
     <main className="">
       <section className="bg-white flex p-4 mb-4">
-        <img src={image} alt="table" />
+        <img className="w-2/6" src={image} alt="table" />
         <div className="ml-12">
           <h3 className="mb-5 text-2xl font-bold">{title}</h3>
           <p className="mb-5 text-gray-600">{description}</p>
-          <p className="text-xl text-bold text-orange-500 mb-5">Ksh {price}</p>
+          <p className="text-xl text-bold text-pink-500 mb-5">Ksh {price}</p>
           <span className="flex mb-5">
             {Array(rating)
               .fill()
@@ -63,8 +63,11 @@ const WallHandler = ({id, title, image, description, price, rating }) => {
                 <p>🌟</p>
               ))}
           </span>
-          <button onClick={addToBasket} className="bg-orange-500 hover:bg-orange-600 text-white p-2 uppercase px-5">
-            Add to cart
+          <button
+            onClick={addToBasket}
+            className="bg-pink-500 hover:bg-pink-600 text-white p-2 uppercase px-5"
+          >
+            Order Drink
           </button>
         </div>
       </section>
@@ -72,53 +75,50 @@ const WallHandler = ({id, title, image, description, price, rating }) => {
   );
 };
 
-
 const WallUnit = () => {
   return (
     <div className="pt-24 mx-wd mx-auto">
-      <h2 className="text-2xl prose flex items-center">
-        Super Mrembo Furniture Palace (<h2>Wall Units</h2>){" "}
-      </h2>
+      <h2 className="text-2xl prose flex items-center">Take a soft Drink</h2>
       <main className="flex justify-between flex-wrap">
         <section className="mx-wd3">
           <WallHandler
             id="1234"
-            title="JohFun Large Storage Cabinet, Soft White Finish"
+            title="Enjoy the best drink here"
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={29500}
-            image="https://m.media-amazon.com/images/I/61DohUGovdL._AC_UL320_.jpg"
+            price={500}
+            image="https://images.immediate.co.uk/production/volatile/sites/30/2021/11/diabolo-mockail-440-x400-c795884.jpg"
             rating={4}
           />
           <WallHandler
             id="1234"
-            title="JohFun Cannery Bridge Storage Wall, Sindoori Mango finish"
+            title="Enjoy the best drink here"
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={30500}
-            image="https://m.media-amazon.com/images/I/81o5Ax5BfAL._AC_UL320_.jpg"
+            price={1000}
+            image="https://static.onecms.io/wp-content/uploads/sites/44/2021/06/09/recipe-red-drink.jpg"
             rating={4}
           />
           <WallHandler
             id="1234"
-            title="Bamboo 3-Tier Shoe Shelf"
+            title="Enjoy the best drink here"
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
             price={42500}
-            image="https://m.media-amazon.com/images/I/810YkVISKUS._AC_UL320_.jpg"
+            image="https://img.etimg.com/thumb/msid-60172374,width-640,resizemode-4,imgsize-102340/vermouth.jpg"
             rating={4}
           />
           <WallHandler
             id="1234"
-            title="ClosetMaid 8925 2-Door Stackable Laminate Organizer, Espresso"
+            title="Enjoy the best drink here"
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={13000}
-            image="https://m.media-amazon.com/images/I/71LhXxkz6+L._AC_UL320_.jpg"
+            price={500}
+            image="https://cf.ltkcdn.net/cocktails/images/orig/200804-2121x1414-cocktails.jpg"
             rating={4}
           />
         </section>
@@ -127,6 +127,6 @@ const WallUnit = () => {
       </main>
     </div>
   );
-}
+};
 
-export default WallUnit
+export default WallUnit;

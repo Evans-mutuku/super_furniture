@@ -1,22 +1,14 @@
 export const SlideData = [
   {
     image:
-      "https://cdn.decoist.com/wp-content/uploads/2014/07/Lovely-underlit-shelves-add-elegance-to-the-gorgeous-wall-unit-system.jpg",
+      "https://a0.muscache.com/im/pictures/35d03179-3b9b-4898-b161-eb466bf533c6.jpg?im_w=720",
   },
   {
     image:
-      "https://www.knightsbridge-furniture.co.uk/wp-content/uploads/2021/12/Drift-Range-03.jpg",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-23738476/original/b0cd03e8-79f9-4acf-a73e-5b24fa779376.jpeg?im_w=960",
   },
   {
     image:
-      "https://www.trendline-furniture.com/wp-content/uploads/2020/12/4757-H.jpg",
-  },
-  {
-    image:
-      "https://cdn-images.article.com/products/SKU3222V1/2890x1500/image29111.jpg?fit=max&w={width}&q={q}",
-  },
-  {
-    image:
-      "https://www.fairdealfurniture.co.ke/wp-content/uploads/2021/04/T743-0-ANGLE-SW-P1-KO.jpg",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-23738476/original/1a5c93a1-106f-4ee7-83ff-1bb37963cdc1.jpeg?im_w=720",
   },
 ];

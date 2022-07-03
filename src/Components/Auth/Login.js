@@ -5,26 +5,31 @@ import { auth } from "../../Utils/firebase";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState('')
-  const navigate = useNavigate()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const register = (e) => {
     e.preventDefault();
 
-    auth.createUserWithEmailAndPassword(email, password).then(auth => {
-      navigate('/')
-    }).catch(error => alert(error.message))
-  }
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        navigate("/");
+      })
+      .catch((error) => alert(error.message));
+  };
 
-  const login =(e) => {
+  const login = (e) => {
     e.preventDefault();
 
-    auth.signInWithEmailAndPassword(email, password).then(auth => {
-      navigate('/')
-
-    }).catch(error => alert(error.message))
-  }
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        navigate("/");
+      })
+      .catch((error) => alert(error.message));
+  };
 
   // const googleRegister = (e) => {
   //   e.preventDefault();
@@ -36,8 +41,8 @@ const Login = () => {
 
   return (
     <div className="h-screen pt-24 flex flex-col items-center">
-      <img className="w-52" src={logo} alt="Logo" />
-      <main className="border border-orange-600 w-2/5 mx-auto rounded-sm mt-6 p-4">
+      {/* <img className="w-52" src={logo} alt="Logo" /> */}
+      <main className="border border-pink-600 w-2/5 mx-auto rounded-sm mt-6 p-4">
         <form>
           <h1 className="text-2xl font-semibold">Sign-In</h1>
           <label>Email Address</label> <br />
@@ -46,7 +51,7 @@ const Login = () => {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="p-2 mt-1 pl-2 focus:outline-none w-full pr-2 border-2 border-orange-400"
+            className="p-2 mt-1 pl-2 focus:outline-none w-full pr-2 border-2 border-pink-400"
           />
           <br />
           <br />
@@ -56,21 +61,27 @@ const Login = () => {
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="p-2 mt-1 pl-2 focus:outline-none w-full pr-2 border-2 border-orange-400"
+            className="p-2 mt-1 pl-2 focus:outline-none w-full pr-2 border-2 border-pink-400"
           />
         </form>
 
-        <button onClick={login} className="bg-orange-500 text-c mt-8 mb-4 w-full p-2 rounded-sm font-bold hover:bg-orange-600">
+        <button
+          onClick={login}
+          className="bg-pink-500 text-c mt-8 mb-4 w-full p-2 rounded-sm font-bold hover:bg-pink-600"
+        >
           {" "}
           Login{" "}
         </button>
         <p className="text-sm mb-2">
-          By signing-in you agree to the JohFun Conditions of Use
-          & Sale. Please see our Privacy Notice, our Cookie Notice and our
-          Interest-Based Ads Notice
+          By signing-in you agree to the JohFun Conditions of Use & Sale. Please
+          see our Privacy Notice, our Cookie Notice and our Interest-Based Ads
+          Notice
         </p>
 
-        <button onClick={register} className="border border-orange-500 text-c  w-full p-2 rounded-sm font-bold hover:bg-orange-600 duration-150">
+        <button
+          onClick={register}
+          className="border border-pink-500 text-c  w-full p-2 rounded-sm font-bold hover:bg-pink-600 duration-150"
+        >
           {" "}
           Create Account{" "}
         </button>

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useStateValue } from '../../Utils/StateProvider';
+import { useStateValue } from "../../Utils/StateProvider";
 
 const LoginComponent = () => {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const LoginComponent = () => {
         </h3>
         <button
           onClick={() => navigate("/login")}
-          className="text-white bg-orange-500 hover:bg-orange-600 p-1 font-semibold w-full mt-4"
+          className="text-white bg-pink-500 hover:bg-pink-600 p-1 font-semibold w-full mt-4"
         >
           Sign In Now
         </button>
@@ -24,7 +24,7 @@ const LoginComponent = () => {
           src="https://marshallcf.com/wp-content/uploads/2018/10/Time-to-Sell.jpeg"
           alt="coming soon"
         />
-        <button className="bg-orange-500 font-semibold hover:bg-orange-600 text-white w-full mt-3 rounded-sm p-1">
+        <button className="bg-pink-500 font-semibold hover:bg-pink-600 text-white w-full mt-3 rounded-sm p-1">
           Sell With Us
         </button>
       </section>
@@ -32,30 +32,30 @@ const LoginComponent = () => {
   );
 };
 
-const BedsHandler = ({id, title, image, description, price, rating }) => {
-  const [{}, dispatch] = useStateValue()
+const BedsHandler = ({ id, title, image, description, price, rating }) => {
+  const [{}, dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({
-      type: 'ADD_TO_BASKET',
+      type: "ADD_TO_BASKET",
       item: {
         id: id,
         title: title,
         image: image,
         description: description,
         price: price,
-        rating: rating
-      }
-    })
-  }
+        rating: rating,
+      },
+    });
+  };
   return (
     <main className="">
       <section className="bg-white flex p-4 mb-4">
-        <img className='w-60' src={image} alt="table" />
+        <img className="w-2/6" src={image} alt="table" />
         <div className="ml-12">
           <h3 className="mb-5 text-2xl font-bold">{title}</h3>
           <p className="mb-5 text-gray-600">{description}</p>
-          <p className="text-xl text-bold text-orange-500 mb-5">Ksh {price}</p>
+          <p className="text-xl text-bold text-pink-500 mb-5">Ksh {price}</p>
           <span className="flex mb-5">
             {Array(rating)
               .fill()
@@ -63,7 +63,10 @@ const BedsHandler = ({id, title, image, description, price, rating }) => {
                 <p>🌟</p>
               ))}
           </span>
-          <button onClick={addToBasket} className="bg-orange-500 hover:bg-orange-600 text-white p-2 uppercase px-5">
+          <button
+            onClick={addToBasket}
+            className="bg-pink-500 hover:bg-pink-600 text-white p-2 uppercase px-5"
+          >
             Add to cart
           </button>
         </div>
@@ -76,48 +79,48 @@ const Beds = () => {
   return (
     <div className="pt-24 mx-wd mx-auto">
       <h2 className="text-2xl prose flex items-center">
-        Super Mrembo Furniture Palace (<h2>Beds</h2>){" "}
+        Tired of Busy Day? Take a good sleep
       </h2>
       <main className="flex justify-between flex-wrap">
         <section className="mx-wd3">
           <BedsHandler
             id="1234"
-            title="JohFun super Bed"
+            title="Tired of Busy Day? Take a good sleep"
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={20500}
-            image="https://www.godrejinterio.com/imagestore/B2C/56101515SD00434/56101515SD00434_01_803x602.png"
+            price={4000}
+            image="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bedroom-decorating-ideas-1647541732.jpg?crop=1.00xw:0.645xh;0,0.214xh&resize=1200:*"
             rating={4}
           />
           <BedsHandler
             id="1234"
-            title="JohFun Furniture - Copeland Furniture Platform Bed Mansfield"
+            title="Tired of Busy Day? Take a good sleep"
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={22000}
-            image="https://www.circlefurniture.com/userfiles/images/Products/copeland/Mansfield/Mansfield-Bed.jpg"
+            price={5500}
+            image="https://assets.architecturaldigest.in/photos/628323aa62a924b1922b7bce/4:3/w_1600%2Cc_limit/Bedroom%2520blueprint.jpg"
             rating={4}
           />
           <BedsHandler
             id="1234"
-            title="Bamboo Bed"
+            title="Tired of Busy Day? Take a good sleep"
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={18500}
-            image="https://www.shipshewanafurniture.com/images/brentwood-bed.jpg"
+            price={1500}
+            image="https://www.familyhandyman.com/wp-content/uploads/2020/12/accent-wall-127445325_3804584359581176_1849671581697220606_n.jpg?fit=696,696"
             rating={4}
           />
           <BedsHandler
             id="1234"
-            title="JohFun Caribou Solid Hardwood Twin Bunk Bed"
+            title="Tired of Busy Day? Take a good sleep"
             description={
               " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorumducimus, quis quidem nulla facere unde molestiae. Possimus magnam eos assumenda reprehenderit nesciunt soluta repellat quo dolorumenim aut. Officiis, quas!"
             }
-            price={13000}
-            image="https://m.media-amazon.com/images/I/71GM4Dp8KJL._AC_UL320_.jpg"
+            price={3500}
+            image="https://cdn.mos.cms.futurecdn.net/WxdcEfmQgGHk5dm9beCKv9.jpg"
             rating={4}
           />
         </section>
@@ -126,6 +129,6 @@ const Beds = () => {
       </main>
     </div>
   );
-}
+};
 
-export default Beds
+export default Beds;
